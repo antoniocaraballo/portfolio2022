@@ -71,6 +71,10 @@ header {
   @include mix.logo;
 }
 
+.hamMenu {
+  display: none;
+}
+
 .nav {
   ul {
     display: flex;
@@ -389,6 +393,12 @@ footer {
 
   .lpContent {
     margin-top: 120px;
+  }
+
+  .lpInfo {
+    h2 {
+      line-height: 1;
+    }
   }
 
   .amImage {

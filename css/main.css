@@ -100,6 +100,10 @@ header {
   font-size: 60px;
 }
 
+.hamMenu {
+  display: none;
+}
+
 .nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -453,6 +457,10 @@ footer {
 @media only screen and (max-width: 850px) {
   .lpContent {
     margin-top: 120px;
+  }
+
+  .lpInfo h2 {
+    line-height: 1;
   }
 
   .amImage img {
