@@ -16,12 +16,16 @@
         <h2 class="logo">A.</h2>
         <nav class="nav">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#aboutMe">About</a></li>
-            <li><a href="#myProjects">Projects</a></li>
-            <li><a href="#contactMe">Contact me</a></li>
+            <li><a href="#" onclick="closeMenu()">Home</a></li>
+            <li><a href="#aboutMe" onclick="closeMenu()">About</a></li>
+            <li><a href="#myProjects" onclick="closeMenu()">Projects</a></li>
+            <li><a href="#contactMe" onclick="closeMenu()">Contact me</a></li>
           </ul>
         </nav>
+        <div class="hamMenu">
+          <img src="./icons/menu.png" alt="" class="open" onclick="openMenu()">
+          <img src="./icons/close.png" alt="" class="close" onclick="closeMenu()">
+        </div>
       </div>
     </header>
     <!-- Landing Page Content -->
@@ -118,5 +122,6 @@
       <p class="text">All Rights Reserved</p>
     </div>
   </footer>
+  <script src="./app.js"></script>
 </body>
 </html>
