@@ -1,15 +1,15 @@
-@use './var' as var;
-@use './mixins' as mix;
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+@use "./var" as var;
+@use "./mixins" as mix;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: var.$dark;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
-  outline: 1px red solid;
+  // outline: 1px red solid;
 }
 
 body {
@@ -19,7 +19,6 @@ body {
 // Go Top Arrow
 
 .topPage {
-  
   position: fixed;
   bottom: 0;
   right: 0;
@@ -28,25 +27,39 @@ body {
   border: 2.5px solid var.$dark;
   padding: 5px;
   border-radius: 100%;
- animation: img 2s ease infinite;
+  animation: img 2s ease infinite;
 
   @keyframes img {
-    0%, 20%, 50%, 80%, 100% {transform: translateY(180deg);}
-    40% {transform: translateY(10px);}
-    60% {transform: translateY(5px);}
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(180deg);
+    }
+    40% {
+      transform: translateY(10px);
+    }
+    60% {
+      transform: translateY(5px);
+    }
   }
 
   img {
     display: flex;
     width: 25px;
     transform: rotate(180deg);
-}
+  }
 }
 
 .landingPage {
   height: 100vh;
   width: 100%;
-  background: linear-gradient(345deg, rgba(186,232,232,1) 0%, rgba(243,251,251,0.5046393557422969) 100%);
+  background: linear-gradient(
+    345deg,
+    rgba(186, 232, 232, 1) 0%,
+    rgba(243, 251, 251, 0.5046393557422969) 100%
+  );
 }
 
 // Navbar
@@ -87,10 +100,9 @@ header {
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
-  
+
     &:hover {
       border-bottom: 2px solid var.$dark;
-  
     }
   }
 }
@@ -225,7 +237,6 @@ header {
   max-width: 1280px;
   margin: 80px auto;
   text-align: center;
-
 }
 
 .projects {
@@ -251,7 +262,7 @@ header {
     justify-content: center;
     align-items: center;
     padding: 10px;
-  
+
     img {
       display: flex;
       width: 30px;
@@ -286,11 +297,21 @@ header {
     filter: invert(1);
     animation: img 2s ease infinite;
 
-  @keyframes img {
-    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-    40% {transform: translateY(-15px);}
-    60% {transform: translateY(-10px);}
-  }
+    @keyframes img {
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-15px);
+      }
+      60% {
+        transform: translateY(-10px);
+      }
+    }
   }
 }
 
@@ -345,10 +366,10 @@ header {
 }
 
 #email {
-  grid-column: 1 / span 2 ;
+  grid-column: 1 / span 2;
 }
 #msg {
-  grid-column: 1 / span 2 ;
+  grid-column: 1 / span 2;
 }
 
 button {
@@ -377,7 +398,7 @@ footer {
   display: flex;
   justify-content: center;
 
-  a{
+  a {
     text-decoration: none;
     margin: 10px;
   }
@@ -387,10 +408,9 @@ footer {
   }
 }
 
-// Tablet 
+// Tablet
 
 @media only screen and (max-width: 850px) {
-
   .lpContent {
     margin-top: 120px;
   }
@@ -402,7 +422,7 @@ footer {
   }
 
   .amImage {
-    img{
+    img {
       width: 100%;
     }
   }
@@ -419,8 +439,7 @@ footer {
   }
 }
 
-@media only screen and (max-width:600px) {
-
+@media only screen and (max-width: 600px) {
   .hamMenu {
     display: flex;
     img {
@@ -439,16 +458,16 @@ footer {
     top: -100vh;
     left: 0;
     z-index: 100;
-    transition: top ease .5s;
-     ul {
-       flex-direction: column;
-       height: 50%;
-       text-align: center;
-       justify-content: space-around;
-     }
-     a {
-       font-size: 26px;
-     }
+    transition: top ease 0.5s;
+    ul {
+      flex-direction: column;
+      height: 50%;
+      text-align: center;
+      justify-content: space-around;
+    }
+    a {
+      font-size: 26px;
+    }
   }
 
   .lpContent {
@@ -473,5 +492,15 @@ footer {
 
   .projects {
     grid-template-columns: auto;
+  }
+  .contactForm {
+    width: 100%;
+  }
+
+  #lname {
+    grid-column: 1 / span 2;
+  }
+  #fname {
+    grid-column: 1 / span 2;
   }
 }
