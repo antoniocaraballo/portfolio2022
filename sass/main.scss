@@ -240,8 +240,9 @@ header {
 }
 
 .projects {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
   padding: 40px;
 }
 
